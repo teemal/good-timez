@@ -1,9 +1,11 @@
 extends layout
 
 block content
-  h1= "Good Timez"
   html
   body
+  	style
+  		include "style.css"
+  	h1 "Good Timez"
     form(action="/charge", method="post")
       article
         label Amount: $1000.00
