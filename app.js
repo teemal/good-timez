@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+var title = "GOOD TIMEZ BOI"
 const keyPublishable = process.env.PUBLISHABLE_KEY;
 const keySecret = process.env.SECRET_KEY;
 
