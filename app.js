@@ -16,14 +16,19 @@ const stripe = require("stripe")(keySecret);
 app.set("view engine", "pug");
 app.use(require("body-parser").urlencoded({extended: false}));
 
-app.get("/", (req, res) =>
+app.get('/', (req, res) =>
+  res.render("pay.pug"));
+
+app.get('/signup', (req, res) =>
+  res.render("signup.pug"));
+
+app.get("/pay", (req, res) =>
   res.render("index.pug", {keyPublishable}));
 
 app.post("/charge", (req, res) => {
-  let amount = 1000;
+  let amount = 100000;
 
   stripe.customers.create({
-     name: req.body.stripeName,
      email: req.body.stripeEmail,
     source: req.body.stripeToken
   })
@@ -38,7 +43,6 @@ app.post("/charge", (req, res) => {
 });
 
 app.listen(4567);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -56,6 +60,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+function paymentInfo(){
+  console.log("TEST")
+}
 
 
 module.exports = app;
