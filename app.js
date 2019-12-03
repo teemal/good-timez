@@ -17,13 +17,13 @@ app.set("view engine", "pug");
 app.use(require("body-parser").urlencoded({extended: false}));
 
 app.get('/', (req, res) =>
-  res.render("pay.pug"));
+  res.render("index.pug"));
 
 app.get('/signup', (req, res) =>
   res.render("signup.pug"));
 
-app.get("/pay", (req, res) =>
-  res.render("index.pug", {keyPublishable}));
+app.post("/pay", (req, res) =>
+  res.render("pay.pug", {keyPublishable}));
 
 app.post("/charge", (req, res) => {
   let amount = 100000;
@@ -34,10 +34,11 @@ app.post("/charge", (req, res) => {
   })
   .then(customer =>
     stripe.charges.create({
-      amount,
+      amount: amount,
       description: "A 1 year subsciption to our amazing product!",
          currency: "usd",
-         customer: customer.id
+         customer: customer.id,
+         reciept_email: req.body.stripeEmail
     }))
   .then(charge => res.render("charge.pug"));
 });
