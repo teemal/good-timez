@@ -37,8 +37,7 @@ app.post("/charge", (req, res) => {
       amount: amount,
       description: "A 1 year subsciption to our amazing product!",
          currency: "usd",
-         customer: customer.id,
-         reciept_email: req.body.stripeEmail
+         customer: customer.id
     }))
   .then(charge => res.render("charge.pug"));
 });
