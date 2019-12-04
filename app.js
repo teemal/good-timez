@@ -19,10 +19,10 @@ app.use(require("body-parser").urlencoded({extended: false}));
 app.get('/', (req, res) =>
   res.render("index.pug"));
 
-app.get('/signup', (req, res) =>
-  res.render("signup.pug"));
+// app.get('/signup', (req, res) =>
+//   res.render("signup.pug"));
 
-app.post("/pay", (req, res) =>
+app.get("/pay", (req, res) =>
   res.render("pay.pug", {keyPublishable}));
 
 app.post("/charge", (req, res) => {
