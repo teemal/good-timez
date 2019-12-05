@@ -17,9 +17,7 @@ h1 {
 .top {
 	font-family: 'Zilla Slab', serif;
 	font-size: 30px;
-	background: url('../images/harold.jpg') center;
-	background-repeat: no-repeat;
-	background-size: 40%;
+	margin-bottom: 15%;
 }
 
 .bottom-1 {
