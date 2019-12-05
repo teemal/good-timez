@@ -3,6 +3,7 @@ body {
   font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: auto;
   text-align: center;
+  align-items: center;
 }
 
 a {
@@ -21,13 +22,32 @@ h1 {
 	background-size: 40%;
 }
 
-.bottom {
-	margin-top: 10em;
+.bottom-1 {
+	margin-top: 2em;
 	display: grid;
-	grid-template-columns:    repeat(3, 30%);
-	grid-column-gap: 3em;
 	font-family: 'Zilla Slab', serif;
 	font-size: 15px;
+}
+
+.bottom-2 {
+	margin-top: 2em;
+	display: grid;
+	font-family: 'Zilla Slab', serif;
+	font-size: 15px;
+}
+
+.bottom-3 {
+	margin-top: 2em;
+	display: grid;
+	font-family: 'Zilla Slab', serif;
+  font-size: 15px;
+  margin-bottom: 5em;
+}
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
 }
 
 #subscription {
