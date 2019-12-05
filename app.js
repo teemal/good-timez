@@ -15,6 +15,7 @@ const stripe = require("stripe")(keySecret);
 
 app.set("view engine", "pug");
 app.use(require("body-parser").urlencoded({extended: false}));
+app.use(express.static(__dirname + "/public"));
 
 app.get('/', (req, res) =>
   res.render("index.pug"));
