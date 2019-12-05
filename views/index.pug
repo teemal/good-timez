@@ -2,31 +2,33 @@
 
 block content
   html
-  div(class="page-container")
-    div(id="content-wrap")
-      body
-        style
-          include ../public/stylesheets/style.css
-        h1 Good Timez
-        h3 Software that helps facilitate your dynamic schedules, keeps you well informed, saves precious resources, reduces stress, and keeps you organized.
-        br
-        br
+  body
+    style
+      include ../public/stylesheets/style.css
+    link(link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet")
+    div(class='top')
+      h1 Good Timez
+      p Software that helps facilitate your dynamic schedules, keeps you well informed, saves precious resources, reduces stress, and keeps you organized.
 
-        h2 SCHEDULING THAT CHANGES WHEN YOU DO
-        h3 With our leading edge software, you can confidently adjust your schedules, on the fly, and Good Timez will do everything else to keep you organized and informed.
-        br
+      a#buy(href='/pay') Buy Now!
 
-        h2 INFORMATION TO KEEP THOSE YOU CARE ABOUT SAFE
-        h3 Good Timez keeps you informed, so you can always know the whereabouts and safety of those that depend on you.
-        br
+    div(class='bottom')
+      h3 SCHEDULING THAT CHANGES WHEN YOU DO
+      p With our leading edge software, you can confidently adjust your schedules, on the fly, and Good Timez will do everything else to keep you organized and informed.
 
-        h2 SAVE TIME AND MONEY
-        h3 Stop wasting countless hours, slaving away at  manual record keeping. With Good Timez, your workplace can save tens of hours per month per faculty member.
-        br
+      img(src='../images/harold_kid.jpg')
 
-        a(href='/pay')
-          button(type="button" class="buy-button") Buy Now!
+      h3 INFORMATION TO KEEP THOSE YOU CARE ABOUT SAFE
+      p Good Timez keeps you informed, so you can always know the whereabouts and safety of those that depend on you.
+
+      img(src='../images/rambo.jpeg')
+
+      h3 SAVE TIME AND MONEY
+      p Stop wasting countless hours, slaving away at  manual record keeping. With Good Timez, your workplace can save tens of hours per month per faculty member.
+
+      img(src='../images/old_boi.jpg')
 
   footer
-    h1 CONTACT US
-    h3 650 SW Columbia St, Bend, OR 97702, USA <br>taymal1987@gmail.com <br> (555) 555-5555
+    div(class='contact')
+      h3 CONTACT US
+      p 650 SW Columbia St, Bend, OR 97702, USA <br>taymal1987@gmail.com <br> (555) 555-5555
